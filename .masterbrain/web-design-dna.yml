@@ -1,0 +1,21 @@
+project: TOMME Digital
+design_source: CAF chooses
+primary_aesthetic: old-money editorial minimalism
+palette:
+  ink: "#071A14"
+  forest: "#0C2A20"
+  cream: "#F4EFE4"
+  paper: "#E9E0CE"
+  brass: "#BCA36A"
+type_roles:
+  display: classic editorial serif
+  body: neutral system sans-serif
+signature_motif: framed TD monogram and fine brass rules
+motion: calm reveals, restrained desktop depth, reduced-motion fallback
+conversion_emphasis: one primary project inquiry path at natural decision points
+anti_patterns:
+  - loud neon tech gradients
+  - generic glass cards
+  - fabricated proof or metrics
+  - excessive rounded UI
+status: implemented_draft
