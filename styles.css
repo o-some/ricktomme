@@ -40,8 +40,8 @@ h1{font-size:clamp(3.2rem,6.35vw,6.75rem);line-height:.94;margin:0;max-width:11.
 h1 em,h2 em{color:var(--brass-light);font-weight:400}
 .hero-lead{max-width:39rem;color:var(--muted);font-size:clamp(1.02rem,1.35vw,1.25rem);line-height:1.65;margin:2rem 0 2.35rem}
 .hero-actions{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
-.hero-trust{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;margin-top:2.2rem;color:rgba(244,239,228,.58);font-size:.71rem;letter-spacing:.08em;text-transform:uppercase}
-.hero-trust span{display:flex;align-items:center;gap:.55rem}.hero-trust span:before{content:"";width:.32rem;height:.32rem;border-radius:50%;background:var(--brass)}
+.hero-trust{display:grid;grid-template-columns:repeat(3,max-content);width:min(100%,43rem);margin-top:2.2rem;color:rgba(244,239,228,.62);font-size:.68rem;letter-spacing:.075em;text-transform:uppercase}
+.hero-trust span{padding:0 1rem;border-right:1px solid rgba(217,198,145,.28);white-space:nowrap}.hero-trust span:first-child{padding-left:0}.hero-trust span:last-child{padding-right:0;border-right:0}
 .button{display:inline-flex;gap:.9rem;align-items:center;justify-content:center;border:1px solid transparent;padding:1rem 1.35rem;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;cursor:pointer;transition:transform .3s var(--ease),background .3s,color .3s}
 .button:hover{transform:translateY(-2px)}
 .button-primary{background:var(--brass);color:var(--ink)}
@@ -192,7 +192,7 @@ footer>p:last-child{text-align:right}.footer-links{text-align:center}
   .hero{min-height:48rem;padding-bottom:5.3rem}.hero-media{inset:7rem -9rem 0 37%}
   h1{font-size:clamp(3.15rem,15.5vw,5.2rem)}
   .hero-actions{align-items:flex-start;flex-direction:column;gap:1.2rem}
-  .hero-trust{display:grid;grid-template-columns:1fr;gap:.45rem;margin-top:1.5rem}
+  .hero-trust{display:grid;grid-template-columns:1fr;gap:.45rem;margin-top:1.5rem}.hero-trust span{padding:0;border:0;white-space:normal}
   .proof-bar{grid-template-columns:1fr}.proof-bar p{padding:1rem 0!important;border-right:0;border-bottom:1px solid var(--line)!important}.proof-bar p:last-child{border-bottom:0!important}
   .manifesto{grid-template-columns:1fr}.section-number,.manifesto-aside{grid-column:1}
   .manifesto h2,.section-heading h2,.about h2,.contact h2{font-size:clamp(2.55rem,12.5vw,4.2rem)}
