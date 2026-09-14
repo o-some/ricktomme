@@ -1,0 +1,14 @@
+release_state: PARTIAL
+search_indexing: intentionally_noindex
+checks:
+  semantic_structure: implemented
+  responsive_layout_source_review: implemented
+  keyboard_navigation: implemented
+  reduced_motion: implemented
+  visible_image_integrity: blocked
+  rendered_mobile_qa: not_run
+  rendered_desktop_qa: not_run
+  contact_path: blocked_pending_details
+  legal_pages: blocked_pending_operator_details
+  live_deployment: not_authorized
+premium_pass: false
