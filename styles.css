@@ -114,6 +114,13 @@ h1 em,h2 em{color:var(--brass-light);font-weight:400}
 .button-light{background:var(--cream);color:var(--ink)}
 .button-light:hover{background:var(--brass-light)}
 .contact-status{margin-top:1rem;color:var(--brass-light);font-size:.85rem}
+.contact-form{width:min(100%,44rem);margin-top:1.2rem;text-align:left;display:grid;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form label{display:grid;gap:.45rem;color:var(--brass-light);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid rgba(244,239,228,.3);border-radius:0;background:rgba(7,26,20,.42);color:var(--cream);padding:.9rem 1rem;font:1rem/1.4 var(--sans);text-transform:none;letter-spacing:0;outline:none}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--brass-light);box-shadow:0 0 0 2px rgba(217,198,145,.15)}
+.contact-form textarea{resize:vertical;min-height:7rem}
+.contact-form .button{justify-self:start;margin-top:.4rem}
 .contact-monogram{position:absolute;right:-.05em;bottom:-.31em;font-family:var(--serif);font-size:37vw;line-height:1;color:rgba(188,163,106,.045);letter-spacing:-.12em}
 footer{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center;padding:2.3rem var(--pad);border-top:1px solid var(--line);font-size:.72rem;color:var(--muted);letter-spacing:.08em}
 footer>p:last-child{text-align:right}.footer-links{text-align:center}
@@ -150,6 +157,7 @@ footer>p:last-child{text-align:right}.footer-links{text-align:center}
   .steps{grid-template-columns:1fr}.step{min-height:0;padding:2rem 0!important;border-right:0!important;border-top:1px solid rgba(7,26,20,.16)}.step span{margin-bottom:1.5rem}
   .about{grid-template-columns:1fr}.about-media{max-height:31rem}
   .offer{min-height:31rem}.contact{min-height:42rem}
+  .form-row{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}

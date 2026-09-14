@@ -7,17 +7,17 @@ slots:
     desktop_ratio: "4:5"
     mobile_direction: face-safe right-side composition
     focal_point: face and upper body
-    status: blocked_local_attachment_transport
+    status: approved_public_derivative
   - id: editorial
     public_path: assets/rick-editorial.webp
     desktop_ratio: "8:5"
     mobile_direction: centered with wide safe area
     focal_point: Rick in work context
-    status: blocked_local_attachment_transport
+    status: approved_public_derivative
   - id: portrait
     public_path: assets/rick-portrait.webp
     desktop_ratio: "4:5"
     mobile_direction: face-safe portrait
     focal_point: face and upper body
-    status: blocked_local_attachment_transport
-release_rule: no public deployment before assets are processed, identity-checked and integrated
+    status: approved_public_derivative
+release_rule: assets are processed, metadata-stripped, identity-checked and integrated

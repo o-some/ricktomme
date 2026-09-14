@@ -5,10 +5,10 @@ checks:
   responsive_layout_source_review: implemented
   keyboard_navigation: implemented
   reduced_motion: implemented
-  visible_image_integrity: blocked
+  visible_image_integrity: passed_source_and_decode_check
   rendered_mobile_qa: not_run
   rendered_desktop_qa: not_run
-  contact_path: blocked_pending_details
+  contact_path: prepared_pending_email
   legal_pages: blocked_pending_operator_details
-  live_deployment: not_authorized
+  live_deployment: preview_authorized
 premium_pass: false

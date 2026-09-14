@@ -41,9 +41,20 @@ if(!reduced&&matchMedia('(min-width: 901px)').matches){
   addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(paint);ticking=true}},{passive:true});
 }
 
-document.querySelector('[data-contact-button]')?.addEventListener('click',()=>{
-  const status=document.querySelector('[data-contact-status]');
-  status.hidden=false;
-  status.focus?.();
+document.querySelector('[data-contact-form]')?.addEventListener('submit',event=>{
+  event.preventDefault();
+  const form=event.currentTarget;
+  const status=form.querySelector('[data-contact-status]');
+  const data=new FormData(form);
+  const recipient=window.TOMME_CONFIG?.email?.trim();
+  if(!recipient){
+    status.textContent='Die Anfrage ist vorbereitet. Der direkte Versand wird aktiviert, sobald die geschäftliche E-Mail hinterlegt ist.';
+    status.hidden=false;
+    return;
+  }
+  const subject=encodeURIComponent(`Projektanfrage: ${data.get('project')}`);
+  const body=encodeURIComponent(`Name: ${data.get('name')}\nE-Mail: ${data.get('email')}\nProjekt: ${data.get('project')}\n\n${data.get('message')}`);
+  location.href=`mailto:${recipient}?subject=${subject}&body=${body}`;
 });
+if(window.TOMME_CONFIG?.legalReady){document.querySelector('[data-legal-links]').hidden=false}
 document.querySelector('[data-year]').textContent=new Date().getFullYear();

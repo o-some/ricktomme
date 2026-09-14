@@ -8,6 +8,7 @@
   <title>TOMME Digital — Digitale Präsenz mit Substanz</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -157,8 +158,21 @@
         <p class="eyebrow">Bereit für den nächsten Schritt?</p>
         <h2>Lass uns etwas bauen,<br><em>das bleibt.</em></h2>
         <p>Erzähl kurz, wo du stehst und was du erreichen möchtest. Im ersten Gespräch klären wir ehrlich, welcher Weg für dein Projekt sinnvoll ist.</p>
-        <button class="button button-light" type="button" data-contact-button>Projekt anfragen <span aria-hidden="true">↗</span></button>
-        <p class="contact-status" data-contact-status hidden>Der direkte Kontaktweg wird vor der Veröffentlichung ergänzt.</p>
+        <form class="contact-form" data-contact-form>
+          <div class="form-row">
+            <label>Dein Name<input name="name" autocomplete="name" required></label>
+            <label>E-Mail<input name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <label>Worum geht es?
+            <select name="project" required>
+              <option value="">Bitte auswählen</option>
+              <option>Website</option><option>Landingpage</option><option>Digitales System</option><option>Markenauftritt</option>
+            </select>
+          </label>
+          <label>Erzähl kurz von deinem Projekt<textarea name="message" rows="4" required></textarea></label>
+          <button class="button button-light" type="submit">Projektanfrage vorbereiten <span aria-hidden="true">↗</span></button>
+          <p class="contact-status" data-contact-status hidden role="status"></p>
+        </form>
       </div>
       <div class="contact-monogram" aria-hidden="true">TD</div>
     </section>
@@ -167,9 +181,7 @@
   <footer>
     <a class="brand" href="#top"><img src="assets/logo.svg" alt="TOMME Digital" width="166" height="42"></a>
     <p>Digitale Präsenz mit Substanz.</p>
-    <div class="footer-links">
-      <span>Impressum und Datenschutz folgen mit den bestätigten Betreiberdaten.</span>
-    </div>
+    <div class="footer-links" data-legal-links hidden><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
     <p>© <span data-year></span> TOMME Digital</p>
   </footer>
 </body>
